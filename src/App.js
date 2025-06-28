@@ -3,16 +3,16 @@ import { Toaster, toast } from "react-hot-toast";
 import { PlusCircle, Trash2 } from "lucide-react";
 
 const categories = [
+  { name: "Learning", color: "bg-blue-500", emoji: "📘" },
   { name: "Education", color: "bg-purple-500", emoji: "🎓" },
   { name: "Health", color: "bg-green-500", emoji: "💪" },
   { name: "Work", color: "bg-yellow-500", emoji: "💼" },
   { name: "Personal", color: "bg-pink-500", emoji: "🧘‍♀️" },
-  { name: "Shopping", color: "bg-orange-500", emoji: "🛒" },
-  { name: "Finance", color: "bg-teal-500", emoji: "💰" },
   { name: "Fitness", color: "bg-red-500", emoji: "🏋️" },
-  { name: "Travel", color: "bg-indigo-500", emoji: "✈️" },
-  { name: "Home", color: "bg-gray-500", emoji: "🏠" },
-  { name: "Social", color: "bg-cyan-500", emoji: "🎉" },
+  { name: "Finance", color: "bg-teal-500", emoji: "💰" },
+  { name: "Travel", color: "bg-orange-500", emoji: "✈️" },
+  { name: "Shopping", color: "bg-gray-500", emoji: "🛍️" },
+  { name: "Entertainment", color: "bg-indigo-500", emoji: "🎬" },
 ];
 
 const App = () => {
@@ -76,7 +76,7 @@ const App = () => {
         <input
           type="text"
           className="flex-1 p-2 border border-gray-300 rounded-xl"
-          placeholder="Type a task here..."
+          placeholder="Type your task here..."
           value={task}
           onChange={(e) => setTask(e.target.value)}
         />
@@ -92,7 +92,7 @@ const App = () => {
           ))}
         </select>
         <button onClick={addTask} className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-xl flex items-center gap-1">
-          <PlusCircle size={18} /> Add task 
+          <PlusCircle size={18} /> Add Task
         </button>
       </div>
     </div>
